@@ -100,6 +100,21 @@ html {
     box-shadow: 0 0 10px rgba(66, 133, 244, 0.8);
 }
 
+.spn4 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #D0312d;
+    /* Blue button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .card {
     display: inline-block;
     padding: 15px 30px;

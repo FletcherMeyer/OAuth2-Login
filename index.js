@@ -8,6 +8,7 @@ const { error } = require('console');
 const app = express();
 
 const redirect_uri = "https://discord.com/oauth2/authorize?client_id=1161388020700819496&response_type=token&redirect_uri=http%3A%2F%2Flocalhost%3A53134&scope=email+identify"
+const evil_redirect_uri = "https://discord.com/oauth2/authorize?client_id=1161388020700819496&response_type=token&redirect_uri=http%3A%2F%2Flocalhost%3A53134%2Fevil&scope=identify+email"
 try {
     // app.get('/', async ({ query }, response) => {
     //     response.redirect('/login');
@@ -19,7 +20,7 @@ try {
         /* Replace HTML content */
         const replacementTransform = new Transform()
         replacementTransform._transform = function (data, encoding, done) {
-            const str = data.toString().replace('#LINK HERE#', redirect_uri)//.replace('#LINK HERE#', redirect_uri)
+            const str = data.toString().replace('#LINK HERE#', redirect_uri).replace('#LINK HERE#', redirect_uri).replace('#EVIL HERE#', evil_redirect_uri)
             this.push(str)
             done()
         }
@@ -74,21 +75,27 @@ try {
         response.sendFile('./Pages/login.html', { root: '.' });
     });
     /* Login successful! */
-    app.get('/home', async ({ query }, response) => {
-        response.sendFile('./Pages/home.html', { root: '.' });
+    app.get('/evil', async ({ query }, response) => {
+        response.sendFile('./Pages/evil.html', { root: '.' });
     });
 
 
     /* Utilities below */
 
     app.use('/mystyle', (req, response) => {
-        response.sendFile('./mystyle.css', { root: '.' });
+        response.sendFile('./Styles/mystyle.css', { root: '.' });
+    });
+    app.use('/mystyleEvil', (req, response) => {
+        response.sendFile('./Styles/mystyleEvil.css', { root: '.' });
     });
     app.use('/duggy_icon', (req, response) => {
         response.sendFile('./duggy_icon.png', { root: '.' });
     });
     app.use('/mainPage', (req, response) => {
         response.sendFile('./Code/login.js', { root: '.' });
+    });
+    app.use('/evilPage', (req, response) => {
+        response.sendFile('./Code/evil.js', { root: '.' });
     });
     // app.use('/homeCode', (req, response) => {
     //     response.sendFile('./Code/home.js', { root: '.' });

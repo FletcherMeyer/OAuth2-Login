@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    /* Black background */
+    color: #fff;
+    /* White text for contrast */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(135deg, #1f1f2b, #D0312d);
+    /* Black and blue gradient background */
+}
+
+.login-form {
+    background-color: rgba(200, 34, 34, 0.1);
+    /* Slight transparent white background */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.login-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.login-form p {
+    font-size: 14px;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.oauth-button {
+    margin-top: 20px;
+}
+
+.spn2 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #D0312d;
+    /* Blue button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.spn2:hover {
+    background-color: #D0312d;
+    /* Darker blue on hover */
+}
+
+.spn2:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(244, 90, 66, 0.8);
+}
+
+.spn3 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #F9E076;
+    /* Blue button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.spn3:hover {
+    background-color: #F9E076;
+    /* Darker blue on hover */
+}
+
+.spn3:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(244, 90, 66, 0.8);
+}
+
+.card {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #D0312d;
+    /* Blue button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+   }
