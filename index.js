@@ -1,7 +1,7 @@
 const { request } = require('undici');
 const express = require('express');
 const { clientId, clientSecret, port } = require('./config.json');
-const { coloredConsoleLog } = require("./utilities/color-shell-text");
+const { coloredConsoleLog } = require("./Utilities/color-shell-text");
 const Transform = require("stream").Transform
 const fs = require("fs");
 const { error } = require('console');
@@ -78,8 +78,6 @@ try {
     app.get('/evil', async ({ query }, response) => {
         response.sendFile('./Pages/evil.html', { root: '.' });
     });
-
-
     /* Utilities below */
 
     app.use('/mystyle', (req, response) => {
@@ -89,7 +87,7 @@ try {
         response.sendFile('./Styles/mystyleEvil.css', { root: '.' });
     });
     app.use('/duggy_icon', (req, response) => {
-        response.sendFile('./duggy_icon.png', { root: '.' });
+        response.sendFile('./Images/duggy_icon.png', { root: '.' });
     });
     app.use('/mainPage', (req, response) => {
         response.sendFile('./Code/login.js', { root: '.' });
@@ -97,9 +95,6 @@ try {
     app.use('/evilPage', (req, response) => {
         response.sendFile('./Code/evil.js', { root: '.' });
     });
-    // app.use('/homeCode', (req, response) => {
-    //     response.sendFile('./Code/home.js', { root: '.' });
-    // });
 
     app.listen(port, () =>
         coloredConsoleLog(`colorGreenWeb Server Success!\n|colorReset App listening at http://localhost:${port}\n`)
