@@ -1,0 +1,19 @@
+{
+  "name": "oauth2-presentation-3-25-25",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Fletcher Meyer",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "oauth2-presentation-3-25-25": "file:",
+    "react": "^19.0.0",
+    "stream": "^0.0.3",
+    "undici": "^6.21.2"
+  }
+}
