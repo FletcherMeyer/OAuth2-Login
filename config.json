@@ -1,0 +1,6 @@
+{
+	"clientSecret": "CLIENT_SECRET",
+	"port": 53134,
+	"authorizedUserID": "AUTHORIZED_USER_ID",
+	"clientid": "CLIENT_ID"
+}
